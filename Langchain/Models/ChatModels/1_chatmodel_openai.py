@@ -5,7 +5,8 @@ load_dotenv()
 
 model = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
-    temperature=1.5
+    temperature=1.5,
+    max_completion_tokens=10
 )
 
 results = model.invoke("explain your opinion on recent fifa world cup final in 3 lines")

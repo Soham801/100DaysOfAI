@@ -11,6 +11,6 @@ llm= HuggingFaceEndpoint(
 model = ChatHuggingFace(llm=llm)
 
 
-results = model.invoke("Build a simple calculator using python")
+results = model.invoke("What is the best tool to learn langchain?")
 
 print(results.content)

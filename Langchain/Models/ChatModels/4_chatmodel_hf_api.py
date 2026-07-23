@@ -11,6 +11,6 @@ llm= HuggingFaceEndpoint(
 model = ChatHuggingFace(llm=llm)
 
 
-results = model.invoke("What is the capital of india?")
+results = model.invoke("Build a simple calculator using python")
 
 print(results.content)

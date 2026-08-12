@@ -14,6 +14,7 @@ documents = [
     "Sachin Tendulkar, also known as the 'God of Cricket', holds many batting records.",
     "Rohit Sharma is known for his elegant batting and record-breaking double centuries.",
     "Jasprit Bumrah is an Indian fast bowler known for his unorthodox action and yorkers. ",
+    "Vaibhav Sooryanvanshi is a new generational popular hard hitting batsmen of Age 16 "
 ]
 
 query = 'tell me about bumrah'

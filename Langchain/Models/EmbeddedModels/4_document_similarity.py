@@ -18,7 +18,7 @@ documents = [
     "Rajat Patidar is a Successful IPL caption for RCB to win 2 Titles for the team",
 ]
 
-query = 'tell me about bumrah'
+query = 'Tell me about Rajat Patidar'
 
 
 doc_embeddings = embedding.embed_documents(documents)

@@ -14,5 +14,4 @@ documents = [
 ]
 
 results = embeddings.embed_documents(documents)
-
 print(str(results))

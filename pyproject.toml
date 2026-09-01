@@ -33,4 +33,5 @@ dependencies = [
     "tabulate>=0.10.0",
     "torch>=2.13.0",
     "transformers>=5.12.1",
+    "uvicorn>=0.52.4",
 ]

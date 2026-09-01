@@ -43,6 +43,7 @@ dependencies = [
     { name = "tabulate" },
     { name = "torch" },
     { name = "transformers" },
+    { name = "uvicorn" },
 ]
 
 [package.metadata]
@@ -75,6 +76,7 @@ requires-dist = [
     { name = "tabulate", specifier = ">=0.10.0" },
     { name = "torch", specifier = ">=2.13.0" },
     { name = "transformers", specifier = ">=5.12.1" },
+    { name = "uvicorn", specifier = ">=0.52.4" },
 ]
 
 [[package]]
@@ -4196,8 +4198,8 @@ name = "uvicorn"
 version = "0.52.4"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "click", marker = "sys_platform != 'emscripten'" },
-    { name = "h11", marker = "sys_platform != 'emscripten'" },
+    { name = "click" },
+    { name = "h11" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f2/0f/3f86e61397dd33bf2ccf28188c40db6a740658aeebbbf6e7dbc101a1f487/uvicorn-0.52.4.tar.gz", hash = "sha256:73acfee47a0b133c5de13d219492d62d8a31e935f4fe6e41a232451a15379f86", size = 100627, upload-time = "2026-08-19T06:27:41.821Z" }
 wheels = [

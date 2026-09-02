@@ -13,3 +13,4 @@ app = FastAPI()
 async def root():
     return {"Message":"Hello World!"}
 
+## Deploying Fastapi server

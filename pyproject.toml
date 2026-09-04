@@ -5,7 +5,9 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "cassio>=0.1.10",
     "cv>=1.0.0",
+    "datasets>=5.0.1",
     "fastapi[standard]>=0.141.1",
     "huggingface-hub>=1.21.0",
     "ipykernel>=7.3.0",
@@ -32,6 +34,7 @@ dependencies = [
     "strands-agents-tools>=0.8.6",
     "supabase>=2.31.0",
     "tabulate>=0.10.0",
+    "tiktoken>=0.13.0",
     "torch>=2.13.0",
     "transformers>=5.12.1",
     "uvicorn>=0.52.4",

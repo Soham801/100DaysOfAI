@@ -95,3 +95,15 @@ def home():
         "docs": "/docs",
         "redoc": "/redoc",
     }
+
+# ============================================================
+# 6. ANOTHER GET ROUTE
+# ============================================================
+
+@app.get("/about")
+def about():
+    return {
+        "application": "FastAPI Basics",
+        "language": "Python",
+        "framework": "FastAPI",
+    }

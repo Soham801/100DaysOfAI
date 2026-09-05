@@ -41,3 +41,16 @@ products = {
         "category": "Accessories",
     },
 }
+
+# ============================================================
+# 4. PYDANTIC MODELS
+# ============================================================
+# Pydantic models define the structure of incoming/outgoing data.
+#
+# Example JSON:
+#
+# {
+#     "name": "Keyboard",
+#     "price": 2500,
+#     "category": "Accessories"
+# }

@@ -73,3 +73,25 @@ class ProductUpdate(BaseModel):
     name: Optional[str] = None
     price: Optional[float] = None
     category: Optional[str] = None
+
+# ============================================================
+# 5. BASIC GET ROUTE
+# ============================================================
+
+@app.get("/")
+def home():
+    """
+    Basic GET request.
+
+    URL:
+        GET /
+
+    Response:
+        JSON
+    """
+
+    return {
+        "message": "Welcome to FastAPI!",
+        "docs": "/docs",
+        "redoc": "/redoc",
+    }

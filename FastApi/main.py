@@ -54,3 +54,22 @@ products = {
 #     "price": 2500,
 #     "category": "Accessories"
 # }
+
+class Product(BaseModel):
+    name: str
+    price: float
+    category: str
+
+
+class ProductResponse(BaseModel):
+    id: int
+    name: str
+    price: float
+    category: str
+
+
+class ProductUpdate(BaseModel):
+    # Optional fields allow partial updates.
+    name: Optional[str] = None
+    price: Optional[float] = None
+    category: Optional[str] = None

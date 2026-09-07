@@ -268,3 +268,23 @@ def get_product(
 #     "price": 2500,
 #     "category": "Accessories"
 # }
+
+@app.post("/products")
+def create_product(product: Product):
+
+    # Generate a simple ID.
+    new_id = max(products.keys(), default=0) + 1
+
+    new_product = {
+        "id": new_id,
+        "name": product.name,
+        "price": product.price,
+        "category": product.category,
+    }
+
+    products[new_id] = new_product
+
+    return {
+        "message": "Product created successfully",
+        "product": new_product,
+    }

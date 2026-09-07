@@ -346,3 +346,45 @@ def replace_product(
         "message": "Product updated",
         "product": products[product_id],
     }
+
+
+# ============================================================
+# 16. PATCH REQUEST
+# ============================================================
+#
+# PATCH is generally used for partial updates.
+#
+# Example JSON:
+#
+# {
+#     "price": 70000
+# }
+#
+# Only the price will change.
+
+
+@app.patch("/products/{product_id}")
+def update_product(
+    product_id: int,
+    product: ProductUpdate,
+):
+
+    if product_id not in products:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    existing_product = products[product_id]
+
+    # exclude_unset=True means:
+    # only fields actually provided by the user are returned.
+
+    updates = product.model_dump(exclude_unset=True)
+
+    existing_product.update(updates)
+
+    return {
+        "message": "Product partially updated",
+        "product": existing_product,
+    }

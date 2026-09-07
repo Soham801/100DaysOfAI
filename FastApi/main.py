@@ -161,3 +161,36 @@ def search_product(keyword: str):
     return {
         "search_keyword": keyword
     }
+
+
+# ============================================================
+# 10. OPTIONAL QUERY PARAMETER
+# ============================================================
+
+@app.get("/products")
+def get_products(
+    category: Optional[str] = None,
+):
+    """
+    Example:
+
+        /products
+
+    OR:
+
+        /products?category=Electronics
+    """
+
+    result = list(products.values())
+
+    if category:
+        result = [
+            product
+            for product in result
+            if product["category"].lower() == category.lower()
+        ]
+
+    return {
+        "count": len(result),
+        "products": result,
+    }

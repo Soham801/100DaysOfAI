@@ -288,3 +288,29 @@ def create_product(product: Product):
         "message": "Product created successfully",
         "product": new_product,
     }
+
+# ============================================================
+# 14. POST WITH RESPONSE MODEL
+# ============================================================
+
+@app.post(
+    "/products/validated",
+    response_model=ProductResponse,
+    status_code=status.HTTP_201_CREATED,
+)
+def create_product_with_response_model(
+    product: Product,
+):
+
+    new_id = max(products.keys(), default=0) + 1
+
+    new_product = {
+        "id": new_id,
+        "name": product.name,
+        "price": product.price,
+        "category": product.category,
+    }
+
+    products[new_id] = new_product
+
+    return new_product

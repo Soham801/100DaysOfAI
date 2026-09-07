@@ -314,3 +314,35 @@ def create_product_with_response_model(
     products[new_id] = new_product
 
     return new_product
+
+
+# ============================================================
+# 15. PUT REQUEST
+# ============================================================
+#
+# PUT is generally used to replace/update a resource.
+
+
+@app.put("/products/{product_id}")
+def replace_product(
+    product_id: int,
+    product: Product,
+):
+
+    if product_id not in products:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    products[product_id] = {
+        "id": product_id,
+        "name": product.name,
+        "price": product.price,
+        "category": product.category,
+    }
+
+    return {
+        "message": "Product updated",
+        "product": products[product_id],
+    }

@@ -156,4 +156,8 @@ def square_number(number: int):
 #
 # "keyword" is a query parameter.
 
-    
+@app.get("/search")
+def search_product(keyword: str):
+    return {
+        "search_keyword": keyword
+    }

@@ -144,5 +144,16 @@ def square_number(number: int):
         "square": number * number,
     }
 
+# ============================================================
+# 9. QUERY PARAMETERS
+# ============================================================
+#
+# Query parameters come after ? in the URL.
+#
+# Example:
+#
+# /search?keyword=laptop
+#
+# "keyword" is a query parameter.
 
     

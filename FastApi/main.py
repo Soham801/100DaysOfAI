@@ -107,4 +107,22 @@ def about():
         "language": "Python",
         "framework": "FastAPI",
     }
+
+# ============================================================
+# 7. PATH PARAMETERS
+# ============================================================
+#
+# URL:
+#     /hello/Soham
+#
+# "name" comes directly from the URL.
+
+
+@app.get("/hello/{name}")
+def hello_user(name: str):
+    return {
+        "message": f"Hello, {name}!"
+    }
+
+
     

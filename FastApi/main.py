@@ -389,3 +389,22 @@ def update_product(
         "product": existing_product,
     }
 
+# ============================================================
+# 17. DELETE REQUEST
+# ============================================================
+
+@app.delete("/products/{product_id}")
+def delete_product(product_id: int):
+
+    if product_id not in products:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    deleted_product = products.pop(product_id)
+
+    return {
+        "message": "Product deleted",
+        "product": deleted_product,
+    }

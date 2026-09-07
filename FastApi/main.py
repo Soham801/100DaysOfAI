@@ -124,5 +124,25 @@ def hello_user(name: str):
         "message": f"Hello, {name}!"
     }
 
+# ============================================================
+# 8. PATH PARAMETER WITH INTEGER
+# ============================================================
+
+@app.get("/square/{number}")
+def square_number(number: int):
+    """
+    FastAPI automatically converts the URL value to int.
+
+    /square/5
+
+    Result:
+        25
+    """
+
+    return {
+        "number": number,
+        "square": number * number,
+    }
+
 
     

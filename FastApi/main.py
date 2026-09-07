@@ -254,3 +254,17 @@ def get_product(
         )
 
     return product
+
+# ============================================================
+# 13. POST REQUEST — REQUEST BODY
+# ============================================================
+#
+# POST is normally used to create data.
+#
+# JSON:
+#
+# {
+#     "name": "Keyboard",
+#     "price": 2500,
+#     "category": "Accessories"
+# }

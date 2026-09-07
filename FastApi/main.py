@@ -408,3 +408,21 @@ def delete_product(product_id: int):
         "message": "Product deleted",
         "product": deleted_product,
     }
+
+
+
+# ============================================================
+# 18. HTTP STATUS CODES
+# ============================================================
+#
+# Common status codes:
+#
+# 200 -> OK
+# 201 -> Created
+# 204 -> No Content
+# 400 -> Bad Request
+# 401 -> Unauthorized
+# 403 -> Forbidden
+# 404 -> Not Found
+# 422 -> Validation Error
+# 500 -> Internal Server Error

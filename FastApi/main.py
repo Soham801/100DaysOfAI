@@ -220,3 +220,37 @@ def filter_products(
     ]
 
     return result
+
+
+
+# ============================================================
+# 12. PATH PARAMETER VALIDATION
+# ============================================================
+
+@app.get("/product/{product_id}")
+def get_product(
+    product_id: int = Path(
+        ...,
+        gt=0,
+        description="ID of the product",
+    )
+):
+    """
+    Example:
+
+        /product/1
+
+    FastAPI checks that product_id:
+        - is an integer
+        - is greater than 0
+    """
+
+    product = products.get(product_id)
+
+    if product is None:
+        raise HTTPException(
+            status_code=404,
+            detail="Product not found",
+        )
+
+    return product

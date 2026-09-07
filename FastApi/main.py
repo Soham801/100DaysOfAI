@@ -388,3 +388,4 @@ def update_product(
         "message": "Product partially updated",
         "product": existing_product,
     }
+

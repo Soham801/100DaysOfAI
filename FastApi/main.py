@@ -194,3 +194,29 @@ def get_products(
         "count": len(result),
         "products": result,
     }
+
+# ============================================================
+# 11. QUERY PARAMETER VALIDATION
+# ============================================================
+
+@app.get("/products/filter")
+def filter_products(
+    min_price: float = Query(
+        0,
+        ge=0,
+        description="Minimum product price",
+    ),
+    max_price: float = Query(
+        1000000,
+        ge=0,
+        description="Maximum product price",
+    ),
+):
+
+    result = [
+        product
+        for product in products.values()
+        if min_price <= product["price"] <= max_price
+    ]
+
+    return result

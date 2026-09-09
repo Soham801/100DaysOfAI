@@ -633,3 +633,14 @@ def calculate(
         "result": result,
     }
 
+# ============================================================
+# 27. ROOT HEALTH CHECK
+# ============================================================
+
+@app.get("/health")
+def health_check():
+
+    return {
+        "status": "healthy",
+        "service": "FastAPI",
+    }

@@ -632,3 +632,4 @@ def calculate(
         "operation": operation,
         "result": result,
     }
+

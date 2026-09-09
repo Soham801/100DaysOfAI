@@ -566,3 +566,26 @@ def status_demo(product_id: int):
         )
 
     return product
+
+# ============================================================
+# 25. ASYNC ENDPOINT
+# ============================================================
+#
+# FastAPI supports both:
+#
+# def
+#
+# and:
+#
+# async def
+#
+# async is useful when working with asynchronous I/O,
+# such as databases, HTTP requests, files, etc.
+
+
+@app.get("/async-example")
+async def async_example():
+
+    return {
+        "message": "This is an asynchronous endpoint."
+    }

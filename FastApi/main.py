@@ -435,3 +435,17 @@ def status_code_example():
     return {
         "message": "This endpoint returns HTTP 201 Created"
     }
+
+
+
+# ============================================================
+# 19. HTTP EXCEPTION
+# ============================================================
+
+@app.get("/error-example")
+def error_example():
+
+    raise HTTPException(
+        status_code=400,
+        detail="This is an example error.",
+    )

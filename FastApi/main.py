@@ -449,3 +449,25 @@ def error_example():
         status_code=400,
         detail="This is an example error.",
     )
+
+# ============================================================
+# 20. REQUEST HEADERS
+# ============================================================
+#
+# Headers are metadata sent with HTTP requests.
+#
+# Example:
+#
+# User-Agent
+# Authorization
+# Content-Type
+
+
+@app.get("/headers")
+def read_headers(
+    user_agent: Optional[str] = Header(None),
+):
+
+    return {
+        "user_agent": user_agent
+    }

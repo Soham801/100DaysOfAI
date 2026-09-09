@@ -545,3 +545,24 @@ def user_example():
         # because it isn't defined in UserResponse.
         "password": "secret",
     }
+
+
+# ============================================================
+# 24. MULTIPLE RESPONSE STATUS CODES
+# ============================================================
+
+@app.get(
+    "/status-demo/{product_id}",
+    response_model=ProductResponse,
+)
+def status_demo(product_id: int):
+
+    product = products.get(product_id)
+
+    if product is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Product not found",
+        )
+
+    return product

@@ -424,3 +424,14 @@ def delete_product(product_id: int):
 # 404 -> Not Found
 # 422 -> Validation Error
 # 500 -> Internal Server Error
+
+
+@app.post(
+    "/demo-status",
+    status_code=status.HTTP_201_CREATED,
+)
+def status_code_example():
+
+    return {
+        "message": "This endpoint returns HTTP 201 Created"
+    }

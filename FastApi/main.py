@@ -488,3 +488,32 @@ def get_user_orders(
         "limit": limit,
         "message": "Example combining path and query parameters",
     }
+
+# ============================================================
+# 22. PYDANTIC VALIDATION
+# ============================================================
+
+class User(BaseModel):
+
+    name: str = Field(
+        ...,
+        min_length=2,
+        max_length=50,
+    )
+
+    age: int = Field(
+        ...,
+        ge=18,
+        le=100,
+    )
+
+    email: str
+
+
+@app.post("/users")
+def create_user(user: User):
+
+    return {
+        "message": "User accepted",
+        "user": user,
+    }

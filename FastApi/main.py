@@ -517,3 +517,31 @@ def create_user(user: User):
         "message": "User accepted",
         "user": user,
     }
+
+
+
+# ============================================================
+# 23. RESPONSE MODEL
+# ============================================================
+
+class UserResponse(BaseModel):
+    name: str
+    age: int
+    email: str
+
+
+@app.get(
+    "/user-example",
+    response_model=UserResponse,
+)
+def user_example():
+
+    return {
+        "name": "Soham",
+        "age": 21,
+        "email": "soham@example.com",
+
+        # This extra field will NOT appear in the response
+        # because it isn't defined in UserResponse.
+        "password": "secret",
+    }

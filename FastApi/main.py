@@ -471,3 +471,20 @@ def read_headers(
     return {
         "user_agent": user_agent
     }
+
+
+# ============================================================
+# 21. MULTIPLE PARAMETERS TOGETHER
+# ============================================================
+
+@app.get("/users/{user_id}/orders")
+def get_user_orders(
+    user_id: int,
+    limit: int = Query(10, ge=1, le=100),
+):
+
+    return {
+        "user_id": user_id,
+        "limit": limit,
+        "message": "Example combining path and query parameters",
+    }

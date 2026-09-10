@@ -16,3 +16,23 @@
                      ▼
              Fine-tuned Model
 '''
+
+## After lesson1.py
+
+'''
+Python
+  │
+  ▼
+Ollama API
+  │
+  ▼
+Llama 3.2
+  │
+  ├── System instruction
+  │
+  └── User instruction
+  │
+  ▼
+Generated response
+
+'''

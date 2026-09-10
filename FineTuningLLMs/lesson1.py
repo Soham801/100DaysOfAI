@@ -5,7 +5,9 @@ response = ollama.chat(
     messages= [
         {
             "role": "user",
-            "context": "Explain what a Python Function is"
+            "content": "Explain what a Python Function is"
         }
     ]
 )
+
+print(response["message"]["content"])

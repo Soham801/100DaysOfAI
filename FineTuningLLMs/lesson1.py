@@ -12,7 +12,10 @@ response = ollama.chat(
 
                         '''
         },
-        
+        {
+            "role": "user",
+            "content": "Explain Python Dictionaires."
+        }
     ]
 )
 

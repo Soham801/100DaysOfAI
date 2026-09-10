@@ -4,9 +4,15 @@ response = ollama.chat(
     model="llama3.2",
     messages= [
         {
-            "role": "user",
-            "content": "Explain what a Python Function is"
-        }
+            "role": "system",
+            "content": '''
+                        You are a Python tutor for beginners.
+                        Always explain concept simply.
+                        Always Provide a small example.
+
+                        '''
+        },
+        
     ]
 )
 

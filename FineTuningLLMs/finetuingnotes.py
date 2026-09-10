@@ -1,13 +1,18 @@
 '''
-llamma 3.2
-
-Training Dataset 
-
-Loss Calculation
-
-Gradient Updates 
-
-MOdified Parameters
-
-Fine Tuned Model
+                 Llama 3.2
+                     │
+                     ▼
+              Training Dataset
+                     │
+                     ▼
+               Loss Calculation
+                     │
+                     ▼
+              Gradient Updates
+                     │
+                     ▼
+             Modified Parameters
+                     │
+                     ▼
+             Fine-tuned Model
 '''

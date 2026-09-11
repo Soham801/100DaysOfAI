@@ -38,3 +38,16 @@ Generated response
 '''
 
 
+"""
+              Same Base Model
+                     │
+          ┌──────────┴──────────┐
+          ▼                     ▼
+      llama3.2              python-tutor
+                               │
+                        System instructions
+                               │
+                               ▼
+                       Different behavior
+
+"""

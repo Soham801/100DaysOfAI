@@ -27,3 +27,4 @@ print(prompt)
 print("\nResponse:")
 print(response["message"]["content"])
 
+print("-" * 60)

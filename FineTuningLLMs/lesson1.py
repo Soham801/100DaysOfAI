@@ -9,7 +9,6 @@ prompts = [
 
 
 for prompt in prompts:
-
     response = ollama.chat(
         model="llama3.2",
             messages= [

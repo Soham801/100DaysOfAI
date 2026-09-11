@@ -1,5 +1,10 @@
 import ollama
 
+
+prompt = [
+    "Explain Python dictionaries."
+]
+
 response = ollama.chat(
     model="llama3.2",
     messages= [

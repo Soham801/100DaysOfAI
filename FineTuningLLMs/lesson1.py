@@ -3,7 +3,9 @@ import ollama
 
 prompt = [
     "Explain Python dictionaries.",
-    "Explain Python dictionaries to a 10-year-old."
+    "Explain Python dictionaries to a 10-year-old.",
+    "Explain Python dictionaries like a university professor.",
+    "Explain Python dictionaries using only a code example",
 ]
 
 response = ollama.chat(

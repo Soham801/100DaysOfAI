@@ -21,6 +21,7 @@ for prompt in prompts:
             ]
     )
 
-
+print("\nPrompt:")
+print(prompt)
 print(response["message"]["content"])
 

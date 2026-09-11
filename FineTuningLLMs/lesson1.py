@@ -13,7 +13,12 @@ for prompt in prompts:
 
     response = ollama.chat(
         model="llama3.2",
-        
+            messages= [
+               {
+                       "role": "user",
+                       "content": "Explain Python Dictionaires."
+               }
+    ]
     )
 
 response = ollama.chat(

@@ -16,12 +16,14 @@ for prompt in prompts:
             messages= [
                {
                        "role": "user",
-                       "content": "Explain Python Dictionaires."
+                       "content": prompt
                }
             ]
     )
 
 print("\nPrompt:")
 print(prompt)
+
+print("\nResponse:")
 print(response["message"]["content"])
 

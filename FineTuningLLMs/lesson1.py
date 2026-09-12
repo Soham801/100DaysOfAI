@@ -16,7 +16,10 @@ for prompt in prompts:
                        "role": "user",
                        "content": prompt
                }
-            ]
+            ],
+            options= {
+                "temperature": 0.2,
+            }
     )
 
 print("\nPrompt:")

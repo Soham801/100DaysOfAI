@@ -113,7 +113,42 @@ Prompting changes the input/instructions given to a model, whereas fine-tuning t
 
 """
 
-
+                 USER TEXT
+                    │
+                    ▼
+               TOKENIZER
+                    │
+                    ▼
+               TOKEN IDs
+                    │
+                    ▼
+               EMBEDDINGS
+                    │
+                    ▼
+          ┌───────────────────┐
+          │    TRANSFORMER    │
+          │                   │
+          │ Self-Attention    │
+          │       ↓           │
+          │ Feed Forward      │
+          │       ↓           │
+          │ Normalization     │
+          │       ↓           │
+          │ Repeated Layers   │
+          └─────────┬─────────┘
+                    │
+                    ▼
+                  LOGITS
+                    │
+                    ▼
+             PROBABILITY
+               DISTRIBUTION
+                    │
+                    ▼
+             NEXT TOKEN
+                    │
+                    ▼
+             Repeat process
 
 
 """

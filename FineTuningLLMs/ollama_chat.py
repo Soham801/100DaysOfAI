@@ -10,5 +10,11 @@ while True:
 
 
     response = ollama.chat(
-        model="llama3.2"
+        model="llama3.2",
+                messages=[
+            {
+                "role": "user",
+                "content": user_input
+            }
+        ]
     )

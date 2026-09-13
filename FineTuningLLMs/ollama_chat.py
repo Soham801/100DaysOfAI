@@ -7,4 +7,8 @@ while True:
 
     if user_input.lower() == "exit":
         break
-    
+
+
+    response = ollama.chat(
+        model="llama3.2"
+    )

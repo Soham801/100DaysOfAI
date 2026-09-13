@@ -52,3 +52,10 @@ Generated response
 
 """
 
+"""
+What is the difference between prompting and fine-tuning?
+
+Prompting changes the input/instructions given to a model, whereas fine-tuning trains the model's parameters using a dataset.
+
+
+"""

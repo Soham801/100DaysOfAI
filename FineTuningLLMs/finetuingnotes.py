@@ -63,7 +63,49 @@ Prompting changes the input/instructions given to a model, whereas fine-tuning t
 
 """
 
+                  LLM DEVELOPMENT
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │   Ollama    │ ← here
+                 └──────┬──────┘
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │ Llama 3.2   │
+                 └──────┬──────┘
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │ Prompting   │
+                 └──────┬──────┘
+                        │
+                        ▼
+                 ┌─────────────┐
+                 │ Python API  │
+                 └─────────────┘
 
+        Later :
+
+                 Hugging Face
+                      ↓
+                 Transformers
+                      ↓
+                    PyTorch
+                      ↓
+                Dataset
+                      ↓
+                  Training
+                      ↓
+                 PEFT / LoRA
+                      ↓
+                  QLoRA
+                      ↓
+               Fine-tuned LLM
+                      ↓
+                    GGUF
+                      ↓
+                   Ollama
 
 
 """

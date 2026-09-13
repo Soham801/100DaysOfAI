@@ -18,7 +18,7 @@ for prompt in prompts:
                }
             ],
             options= {
-                "temperature": 1.2,
+                "temperature": 0.7,
             }
     )
 

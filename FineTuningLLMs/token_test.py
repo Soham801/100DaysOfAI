@@ -11,3 +11,6 @@ token_ids = tokernizer.encode(text)
 
 print("Text: ")
 print(text)
+
+print("\nTokens: ")
+print(tokens)

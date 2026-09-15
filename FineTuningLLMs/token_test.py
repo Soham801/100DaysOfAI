@@ -8,3 +8,6 @@ text = "Hello, How are you?"
 
 tokens = tokernizer.tokenize(text)
 token_ids = tokernizer.encode(text)
+
+print("Text: ")
+print(text)

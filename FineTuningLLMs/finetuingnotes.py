@@ -155,6 +155,24 @@ Prompting changes the input/instructions given to a model, whereas fine-tuning t
 
 """
 
-
+PROBLEM
+   ↓
+REQUIREMENTS
+   ↓
+SYSTEM DESIGN
+   ↓
+TECHNOLOGY SELECTION
+   ↓
+PROJECT STRUCTURE
+   ↓
+IMPLEMENTATION
+   ↓
+TESTING
+   ↓
+INTEGRATION
+   ↓
+DEPLOYMENT
+   ↓
+MONITORING / ITERATION
 
 """

@@ -19,4 +19,5 @@ while True:
         ]
     )
 
+
 print("Llama:", response["message"]["content"])

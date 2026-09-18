@@ -1,5 +1,0 @@
-import secrets
-
-hack = secrets.token_hex(100000000)
-
-print(hack)

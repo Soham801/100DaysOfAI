@@ -5,3 +5,5 @@ print("3. Remove Task ")
 print("4. Exit ")
 
 
+## Creating tasks and storing them in a list
+tasks = []

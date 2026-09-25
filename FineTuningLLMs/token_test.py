@@ -18,11 +18,3 @@ print(tokens)
 print("\nToken IDs: ")
 print(token_ids)
 
-"""
-Text
- ↓
-Tokens
- ↓
-IDs
-
-"""

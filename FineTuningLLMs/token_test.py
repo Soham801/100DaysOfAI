@@ -14,3 +14,7 @@ print(text)
 
 print("\nTokens: ")
 print(tokens)
+
+print("\nToken IDs: ")
+print(token_ids)
+
